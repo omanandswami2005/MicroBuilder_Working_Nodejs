@@ -1,0 +1,388 @@
+body {
+  background: linear-gradient(90deg, #FC466B, #3F5EFB);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.container {
+  /* position: absolute; */
+  transform: translate(-50%, -50%);
+  
+  display: contents ;
+  text-align: center;
+  /* top: 100vh;
+  left: 50%; */
+  /* margin-top: 30rem; */
+}
+
+h3 {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+form {
+
+
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3em;
+  height: 225vh;
+  width: 40vw;
+  margin: auto;
+  
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+
+form p {
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form input,
+.sel,
+select {
+  background: transparent;
+  width: 35vw;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: .9rem;
+}
+
+select {
+  width: 38vw;
+  margin-bottom: 1.9rem;
+}
+
+form input:hover,
+.sel:hover {
+  background: linear-gradient(45deg, #FC466B, #3F5EFB);
+}
+
+.field1 * {
+  /* background: transparent; */
+
+  /* background-color: rgba(255, 0, 0, 1); */
+  background-color: #c971ad;
+  /* background-color: linear-gradient( #FC466B, #3F5EFB); */
+  /* border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2); */
+  color: #ffffff;
+  /* font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+}
+
+
+form input[type=submit]:hover {
+  cursor: pointer;
+}
+
+form input[type=reset]:hover {
+  background: rgba(255, 0, 0, 0.2);
+  cursor: pointer;
+
+}
+
+/* form:hover {
+  margin: 8px;
+} */
+
+#hid{
+  display: none;
+}
+::-moz-placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+:-ms-input-placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.drop {
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.drop-1 {
+  height: 80px;
+  width: 80px;
+  top: 60px;
+  left: 200px;
+  z-index: -1;
+}
+
+.drop-2 {
+  height: 80px;
+  width: 80px;
+  bottom: -57rem;
+  right: 13rem;
+}
+
+.drop-3 {
+  height: 100px;
+  width: 100px;
+  bottom: -200px;
+  right: 200px;
+  z-index: -1;
+}
+
+ .drop-4 {
+  height: 100px;
+  width: 100px;
+  top: -30px;
+  right: 200px;
+}
+
+.drop-5 {
+  height: 60px;
+  width: 60px;
+  bottom:-35rem;
+  left: 200px;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 1200px) {
+
+ form{
+  height: max-content;
+ }
+ .container{
+  margin-top: 27rem;
+ }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+  form{
+    height: max-content;
+   }
+   .container{
+    margin-top: 27rem;
+   }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+  form{
+    height: max-content;
+   }
+   .container{
+    /* margin-top: 27rem; */
+    top: 95vh;
+   }
+
+}
+
+@media (max-width: 850px) {
+  form{
+    height: max-content;
+    width: max-content;
+    padding: 20px;
+   }
+   html{
+    font-size: 110%;
+   }
+   .container{
+    margin-top: 25rem;
+    top: 80vh;
+    /* width: 90vw; */
+   }
+   .drop-4{
+    width: 90px;
+    height: 90px;
+    right: 40px;
+
+   }
+   form input{
+    width: 40vw;
+   }
+   select{
+    width: 45vw;
+   }
+ 
+
+}
+
+@media (max-width: 600px) {
+
+  /* Adjust styles for even smaller screens */
+  html {
+    font-size: 100%;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .container{
+    /* margin-top: 25rem; */
+    top:60vh;
+    width: 100vw;
+   }
+   form{
+    height: max-content;
+    width: 75vw;
+    /* margin: 2rem; */
+    margin: auto;
+    padding: 20px;
+   }
+   .drop-4{
+    width: 70px;
+    height: 70px;
+    right: 40px;
+    top: -45px;
+
+   }
+   .drop-3{
+    width: 90px;
+    height: 90px;
+    right: 90px;
+    top: 550px;
+
+   }
+   .drop-2{
+    width: 70px;
+    height: 70px;
+    right: 90px;
+    bottom: -30px;
+
+   }
+   .drop-1 {
+    height: 80px;
+    width: 80px;
+    top: 20px;
+    left: 5px;
+    z-index: -1;
+}
+.drop-5 {
+  height: 80px;
+  width: 80px;
+  top: 900px;
+  /* bottom: 170px; */
+  left: 10px;
+  z-index: -1;
+}
+
+   form input{
+    width: 55vw;
+   }
+   select{
+    width: 60vw;
+   }  
+}
+
+@media (max-width: 410px) {
+
+  html {
+    font-size: 100%;
+  }
+  .container{
+  
+    top: 130vh;
+    width: 100vw;
+   }
+   form{
+    height: max-content;
+    width: 80vw;
+    margin: 1.1rem;
+    /* padding: 20px; */
+   }
+   .drop-4{
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    top: 0px;
+
+   }
+   .drop-3{
+    width: 90px;
+    height: 90px;
+    right: 10px;
+    top: 550px;
+
+   }
+   .drop-2{
+    width: 70px;
+    height: 70px;
+    right: 2px;
+    bottom: -42rem;
+
+   }
+   .drop-1 {
+    height: 80px;
+    width: 80px;
+    top: -10px;
+    left: 0px;
+    z-index: -1;
+}
+.drop-5 {
+  height: 80px;
+  width: 80px;
+  top: 900px;
+  /* bottom: 170px; */
+  left: 0px;
+  z-index: -1;
+}
+
+   form input{
+    width: 70vw;
+   }
+   select{
+    width: 78vw;
+   }
+   form:hover {
+    margin: 17px;
+  }
+}

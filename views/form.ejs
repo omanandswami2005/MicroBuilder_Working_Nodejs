@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CertificateBuilder</title>
+    <link rel="shortcut icon" href="MyLogo1.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <div class="container">
+        <form action="doc" method="post">
+            <h3>CertificateBuilder Is Here ! <br> Fill Your Certificate Details</h3>
+            <select name="noStd" class="field1" required>
+
+
+                <option value="">Select Number Of Students</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+
+
+            </select><br><br>
+        
+            <div id="dynamicFieldsContainer">
+                <!-- Dynamic fields will be added here -->
+            </div>
+            
+
+          <br><br>
+
+            <select name="sem" class="field1">
+
+
+                <option value="">Hay ! Choose Ur Semister</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+
+            </select><br><br>
+
+            <select name="course" class="field1">
+
+
+                <option value="">Let's Choose Course (Branch)</option>
+                <option value="CO">Computer Engineering</option>
+                <option value="IF">Information Technology</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="EJ">Electronics & Telecommunication Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+
+            </select><br><br>
+
+            <select name="scheme" class="field1">
+
+
+                <option value="">Now, Choose Course Scheme</option>
+                <option value="I">I</option>
+                <option value="K">K</option>
+                <option value="M">M</option>
+                <option value="O">O</option>
+                <option value="Q">Q</option>
+                <option value="S">S</option>
+
+            </select><br><br>
+
+            <input type="text" name="mpTitle" placeholder="Mention a Greate Microproject Title"><br><br>
+
+
+            <input type="text" name="subject" placeholder="Mention Subject Name Here"> <br><br>
+
+
+
+
+            <input type="text" name="subCode" placeholder="Mention Subject Code"><br><br>
+
+            <select name="teacherTitle" class="field1">
+
+
+                <option value="">Select Title To Subject Teacher</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Miss.">Miss.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Ms.">Ms.</option>
+
+
+            </select><br><br>
+            <input type="text" id="teacherName" name="teacherName" placeholder="Mention  Subejct Teacher Name "><br><br>
+
+            <select name="acaYear" class="field1">
+
+
+                <option value="">Time To Choose Academic Year</option>
+                <option value="2023-24">2023-24</option>
+                <option value="2024-25">2024-25</option>
+                <option value="2025-26">2025-26</option>
+                <option value="2026-27">2026-27</option>
+                <option value="2027-28">2027-28</option>
+                <option value="2028-29">2028-29</option>
+                <option value="2029-30">2029-30</option>
+
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+        <div class="drops">
+            <div class="drop drop-1"></div>
+            <div class="drop drop-2"></div>
+            <div class="drop drop-3"></div>
+            <div class="drop drop-4"></div>
+            <div class="drop drop-5"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const numberOfStudentsDropdown = document.querySelector('select[name="noStd"]');
+    const dynamicFieldsContainer = document.getElementById('dynamicFieldsContainer');
+
+    numberOfStudentsDropdown.addEventListener('change', function() {
+        const numStudents = parseInt(this.value); // Convert selected value to an integer
+
+        // Clear any existing fields
+        dynamicFieldsContainer.innerHTML = '';
+
+        // Generate fields based on selected number
+        for (let i = 1; i <= numStudents; i++) {
+            dynamicFieldsContainer.innerHTML += `
+            <select name="studentTitle${i}" class="field1" required>
+                    <option value="">Select Title For Student ${i}</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Miss.">Miss.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                </select><br><br>
+                <input required type="text" name="name${i}" placeholder="Student ${i} Name"><br><br>
+                <input required type="text" name="studentEnrollment${i}" placeholder="Student ${i} Unique Enrollment"><br><br>
+                
+            `;
+        }
+        if (1 < numStudents) {
+            dynamicFieldsContainer.innerHTML +=`
+            <input type="text" id="hid"  value="have" name="pro">
+            `
+        }
+    });
+</script>
+
+</html>

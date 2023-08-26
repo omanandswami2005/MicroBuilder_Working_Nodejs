@@ -1,0 +1,21 @@
+{
+  "name": "mugbit-beta",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build":"npm run build",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Omii",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "docxtemplater": "^3.37.12",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "pizzip": "^3.1.4"
+  },
+  "description": ""
+}
