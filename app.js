@@ -7,8 +7,7 @@ var app = express();
 var bodyParser = require("body-parser");
 const PORT = 7000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("./Public"));
 app.set("view engine", "ejs");
@@ -167,3 +166,7 @@ app.post("/civilcertificate", (req, res) => {
     }
 });
 
+
+app.listen(PORT, ()=>{
+    console.log("listing on port" + PORT);
+})
